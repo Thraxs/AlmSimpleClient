@@ -1,0 +1,25 @@
+﻿<Window x:Class="ALMSimpleClient.FolderGenerator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="ALM Simple Client - Create folders" Height="343.334" Width="510.666" WindowStartupLocation="CenterScreen" Icon="app.ico" ResizeMode="NoResize" SizeToContent="Height">
+    <Grid>
+        <Label Content="Selected Test Lab folder:" HorizontalAlignment="Left" Margin="16,18,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="textBox_labFolder" HorizontalAlignment="Left" Height="23" Margin="164,22,0,0" VerticalAlignment="Top" Width="312" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" VerticalContentAlignment="Center"/>
+        <Label Content="Target directory" HorizontalAlignment="Left" Margin="16,49,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_targetDirectory" Height="23" VerticalAlignment="Top" Margin="16,75,0,0" HorizontalAlignment="Left" Width="380" VerticalContentAlignment="Center"/>
+        <Button x:Name="button_browseDirectory" Content="Browse" VerticalAlignment="Top" Height="23" HorizontalAlignment="Left" Width="75" Margin="401,75,0,0" Click="button_browseDirectory_Click"/>
+        <TextBox x:Name="textBox_templateFile" HorizontalAlignment="Left" Height="23" Margin="16,142,0,0" VerticalAlignment="Top" Width="380" VerticalContentAlignment="Center"/>
+        <CheckBox x:Name="checkBox_enableTemplate" Content="Include a template file" HorizontalAlignment="Left" Margin="16,122,0,0" VerticalAlignment="Top" Checked="checkBox_enableTemplate_Checked" Unchecked="checkBox_enableTemplate_Unchecked" ToolTip="Include a specific file in every folder created."/>
+        <Button x:Name="button_browseTemplate" Content="Browse" HorizontalAlignment="Left" Margin="401,142,0,0" VerticalAlignment="Top" Width="75" Height="23" IsEnabled="False" Click="button_browseTemplate_Click"/>
+        <CheckBox x:Name="checkBox_longPaths" Content="Enable paths longer than 260 characters" HorizontalAlignment="Left" Margin="16,187,0,0" VerticalAlignment="Top" ToolTip="Enables the use of paths of up to 32.000 characters using Win32 functions through P/Invoke."/>
+        <CheckBox x:Name="checkBox_renameFolders" Content="Rename repeated folders automatically" HorizontalAlignment="Left" Margin="16,215,0,0" VerticalAlignment="Top" ToolTip="Rename repeated folders by adding a prefix to the name."/>
+        <CheckBox x:Name="checkBox_useTestNames" Content="Use test names instead of instance names" HorizontalAlignment="Left" Margin="16,242,0,0" VerticalAlignment="Top" ToolTip="Use test names ('Test 1') instead of the test instance names ('[1]Test1') used by default."/>
+        <Button x:Name="button_createFolders" Content="Create folders" HorizontalAlignment="Left" Margin="386,202,0,0" VerticalAlignment="Top" Width="90" Height="40" Click="button_createFolders_Click"/>
+        <Expander x:Name="expander" Header="Execution log" HorizontalAlignment="Left" Margin="16,270,0,10" VerticalAlignment="Top" Width="460">
+            <ListBox x:Name="listBox_log" Height="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,-2,0" Width="460"/>
+        </Expander>
+    </Grid>
+</Window>

@@ -1,0 +1,4 @@
+The application “ALM Simple Client” is developed and distributed free of charge. The developer offers no warranties and is not liable for any problems caused by its usage.
+Using this application requires that the server it connects to has a valid and active HP Application Lifecycle Management license.
+This application is independent and has no relationship to the company Hewlett-Packard Development Company, L.P. HP Application Lifecycle Management is a registered trademark of Hewlett-Packard Development Company, L.P.
+The application uses some resources and the OTA API of the HP Application Lifecycle Management platform. These resources are copyrighted and property of Hewlett-Packard Development Company, L.P. 
